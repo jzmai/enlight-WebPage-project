@@ -18,7 +18,7 @@ git commit -m "Description of changes here"
 To push to your local master fork:
 git push origin master
 To push to the upstream master:
-git push upstream
+git push upstream master
 
 To merge your master with updates from upstream
 git merge upstream/master
