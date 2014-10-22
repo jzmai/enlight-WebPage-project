@@ -7,6 +7,20 @@ If you are part of Enlight, and interested in this project, please speak to bloc
 
 Please also fork your own version to modify/screw around with before making changes to the master upstream branch.
 
+Setup using the shell:
+Create a git account and install git
+fork blockerdude's enlight-webPage-project repository
+open the shell
+navigate to where you want your repo
+
+git clone https://github.com/YOURUSERNAME/enlight-webPage-project.git
+
+cd enlight-webPage-project
+
+git remote add upstream https://github.com/blockerdude/enlight-webPage-project.git
+
+ta-da~
+
 
 Quick Reference:
 To add to commit list:
