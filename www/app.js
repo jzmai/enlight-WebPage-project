@@ -12,11 +12,24 @@
                 jets[number].spraying = 1;
                 console.log('as false');
             }
-        }
+        };
+		$scope.applycode = function(){
+			code = document.getElementById("code").value;
+			console.log('code is');
+			console.log(code);
+			config = parseInt(code, 16); //does some weird wrapping when characters besides A-F are used for any digit after the first, but returns legitimate numbers
+			console.log(config);
+			bitmap = config.toString(2);
+			console.log(bitmap);
+		};
     });
     
+	var bitmap = 0;
+	var code = 0;
+	var config = 0;
     
     
+	
     var jets = [
         { "ID": 1, "name": "V1", "spraying": 1, "enabled": 1 },
         { "ID": 2, "name": "V2", "spraying": 1, "enabled": 1 },

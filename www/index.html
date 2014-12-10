@@ -34,6 +34,11 @@
                 </div>
             </div>
             <p>The buttons on the left control the jets on the vertical caliper while the buttons on the right controls those on the horizontal capliper</p>
+			</br>
+			<form id="form" >
+				<input type="text" pattern="[0-9|A-Z]{6}" maxlength="6" size="6" id="code" title="Codes are six digit numbers in hexadecimal with all letters capitalized.">
+				<input type="submit" ng-click="applycode()">
+			</form>
             </div>
             </center>
         </div>
