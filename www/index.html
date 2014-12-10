@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="myApp" lang="en">
+    <head>
+        <title>Test Page</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="angular.js"></script>
+        <script src="app.js"></script>
+    </head>
+    <body ng-controller="appController as app">
+        <div id="header">
+            <div id="homeButton">
+                <h1><a href='#'>Enlight</a></h1>
+            </div>
+            <div id="menu">
+                <ul>
+                    <li><a href="#">contact</a></li>
+                    <li><a href="#">about</a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="spacer"></div>
+        <div id="wrapper">
+            <h1>Fountain Control - Pre Alpha</h1>
+            </br>
+            <div id="jcwrapper">
+            <div id="jetgroup1">
+                <div ng-repeat='jet in app.jets | limitTo:12'>
+                    <button ng-click="toggle(jet.spraying, jet.ID - 1)">{{jet.name}} : <span ng-show='jet.spraying'>On</span><span ng-hide='jet.spraying'>Off</span></button>
+                </div>
+            </div>
+            <div id="jetgroup2">
+                <div ng-repeat='jet in app.jets | limitTo:-12'>
+                    <button ng-click="toggle(jet.spraying, jet.ID - 1)">{{jet.name}} : <span ng-show='jet.spraying'>On</span><span ng-hide='jet.spraying'>Off</span></button>
+                </div>
+            </div>
+            <p>The buttons on the left control the jets on the vertical caliper while the buttons on the right controls those on the horizontal capliper</p>
+            </div>
+            </center>
+        </div>
+    </body>
+</html>

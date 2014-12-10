@@ -1,0 +1,128 @@
+body{
+    background-color:rgb(180,180,220);
+    color:white;
+    font-family:sans-serif;
+}
+h1{
+    padding:0;
+    margin:0;
+    font-size:20pt;
+    
+}
+button{
+    border-radius:2px;
+    border:none;
+    height:40px;
+    width:150px;
+    font-size:16pt;
+    margin:10px 30px;
+    
+}
+button:hover {
+    background-color:rgb(200,200,200);
+}
+button:active{
+    background-color:rgb(180,180,180);
+    box-shadow: 0 0 2px 1px rgba(0,0,0,.2);
+    outline:none;
+}
+button:focus{
+    outline:none;
+}
+p{
+    padding: 10px 0;
+}
+
+#header{
+    display: block;
+    background-color:gray;
+    background-color:rgba(120,120,160,.9);
+    padding:0;
+    width:100%;
+    margin-left:-8px;
+    margin-top:-12px;
+    padding-top:5px;
+    position:fixed;
+    z-index:10;
+}
+#homeButton{
+    display:block;
+    height:20px;
+    padding-left:20px;
+}
+#homeButton>h1{
+    float:left;
+    padding:0;
+    margin:0;
+    color:white;
+    font-size:24pt;
+}
+#homeButton>h1>a{
+    text-decoration:none;
+    color:white;
+}
+#menu{
+    display:block;
+    width:100%;
+    height:20px;
+    margin-top:-13px;
+    padding-bottom:13px;
+}
+#menu>ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 1;
+}
+#menu>ul>li{
+    float:right;
+}
+#menu>ul>li>a{
+    display:block;
+    width:100px;
+}
+#menu>ul>li>a:link{
+    text-decoration: none;
+    color:white;
+    height:31px;
+    padding-top:10px;
+    margin:-8px auto 0px auto;
+    text-align:center;
+}
+#menu>ul>li>a:visited{
+    text-decoration:none;
+    color:white;
+}
+#menu>ul>li>a:hover{
+    text-decoration:none;
+    color:white;
+    background-color:rgb(200,200,200);
+    background-color:rgba(100,100,100,.25);
+}
+#spacer{
+ display: block;
+ height:40px;
+ width:100%;
+}
+#wrapper{
+    margin:10px auto 20px auto;
+    padding:5px 10px;
+    width: 80%;
+    height:900px;
+    background-color:gray;
+    background-color:rgba(60,60,80,.5);
+    border-radius: 5px;
+    position:relative;
+}
+#jetgroup1{
+    display:block;
+    float:left;
+    width:210px;
+}
+#jetgroup2{
+    display:block;
+    float:right;
+    width:210px;
+}
+#jcwrapper{
+    margin: 0 30px;
+}
