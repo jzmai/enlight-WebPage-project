@@ -9,7 +9,7 @@ h1{
     font-size:20pt;
     
 }
-button{
+.toggle{
     border-radius:2px;
     border:none;
     height:40px;
@@ -18,16 +18,22 @@ button{
     margin:10px 30px;
     
 }
-button:hover {
+.toggle:hover {
     background-color:rgb(200,200,200);
 }
-button:active{
+.toggle:active{
     background-color:rgb(180,180,180);
     box-shadow: 0 0 2px 1px rgba(0,0,0,.2);
     outline:none;
 }
-button:focus{
+.toggle:focus{
     outline:none;
+}
+#stream{
+	display:block;
+	max-width:95%;
+	height:auto;
+	margin: 0 auto;
 }
 p{
     padding: 10px 0;
@@ -115,14 +121,21 @@ p{
 }
 #jetgroup1{
     display:block;
-    float:left;
+	position:absolute;
+    left:0;
     width:210px;
 }
 #jetgroup2{
     display:block;
-    float:right;
+	position:absolute;
+    right:0;
     width:210px;
 }
 #jcwrapper{
     margin: 0 30px;
+}
+#jcwrapperinner{
+	display:block;
+	width:60%;
+	margin: 0 auto;
 }

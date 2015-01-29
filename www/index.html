@@ -25,21 +25,32 @@
             <div id="jcwrapper">
             <div id="jetgroup1">
                 <div ng-repeat='jet in app.jets | limitTo:12'>
-                    <button ng-click="toggle(jet.spraying, jet.ID - 1)">{{jet.name}} : <span ng-show='jet.spraying'>On</span><span ng-hide='jet.spraying'>Off</span></button>
+                    <button class="toggle" ng-click="toggle(jet.spraying, jet.ID - 1)">{{jet.name}} : <span ng-show='jet.spraying'>On</span><span ng-hide='jet.spraying'>Off</span></button>
                 </div>
             </div>
             <div id="jetgroup2">
                 <div ng-repeat='jet in app.jets | limitTo:-12'>
-                    <button ng-click="toggle(jet.spraying, jet.ID - 1)">{{jet.name}} : <span ng-show='jet.spraying'>On</span><span ng-hide='jet.spraying'>Off</span></button>
+                    <button class="toggle" ng-click="toggle(jet.spraying, jet.ID - 1)">{{jet.name}} : <span ng-show='jet.spraying'>On</span><span ng-hide='jet.spraying'>Off</span></button>
                 </div>
             </div>
-            <p>The buttons on the left control the jets on the vertical caliper while the buttons on the right controls those on the horizontal capliper</p>
+			<div id="jcwrapperinner">
+            <p>The buttons on the left control the jets on the vertical calliper while the buttons on the right controls those on the horizontal calliper. You can input a code if you have one, or generate a code from your current pattern to save for later.</p>
 			</br>
 			<form id="form" >
-				<input type="text" pattern="[0-9|A-Z]{6}" maxlength="6" size="6" id="code" title="Codes are six digit numbers in hexadecimal with all letters capitalized.">
+			    Submit a code:<br>
+				<input type="text" pattern="[0-9|A-Z]{6}" maxlength="6" size="6" id="codeIn" title="Codes are six digit hexadecimal numbers.">
 				<input type="submit" ng-click="applycode()">
+				<br>
+				Generate code from current profile:<br>
+				<input type="text" readonly="true" id="codeOut">
 			</form>
+			<button ng-click="makecode()">Generate</button>
+			<br>
+			<br>
+			<h3>Live Stream</h3>
+			<img id="stream" src="http://fountaincam.engr.wisc.edu/mjpg/video.mjpg"/>
             </div>
+			</div>
             </center>
         </div>
     </body>
