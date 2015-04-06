@@ -1,0 +1,91 @@
+a:link, a:visited { 
+    color: white;
+    text-decoration: none;
+    cursor: auto;
+}
+
+a:link:active, a:visited:active { 
+    color: white;
+}
+
+button{
+	margin: 6px;
+	width: 50px;
+	height: 26px;
+	border:none;
+	border-radius:5px;
+}
+button:active{
+    box-shadow: 0 0 2px 1px rgba(0,0,0,.2);
+    outline:none;
+}
+button:focus{
+	outline:none;
+}
+.idle {
+	
+}
+.active{
+	background:rgb(60,60,90);
+	color:white;
+}
+.active:hover{
+	background:rgb(50,50,70);
+}
+.active:active{
+	background:rgb(40,40,60);
+}
+.disabled{
+	background:rgb(255,80,80);
+	color:white;	
+}
+/*.disabled:hover{
+	background:rgb(245,70,70);
+}
+.disabled:active{
+	background:rgb(225,50,50);
+}*/
+.sample{
+	width: 60px;
+	height: 26px;
+}
+.wrapper{
+	width:900px;
+	margin: -10px auto 0 auto;
+}
+
+.navbar{
+	background:rgb(40,40,70);
+	color:white;
+	margin-bottom:0;
+}
+h1{
+	display:inline-block;
+	margin:10px;
+}
+.menu{
+	list-style-type:none;
+	display:inline-block;
+	margin:0;
+	padding:0;
+}
+.menu > li{
+	display:inline;
+	margin:0;
+}
+.menu > li > a {
+	display:inline-block;
+	text-align:center;
+	padding: 0 10px;
+}
+.controlStatus{
+	display:inline-block;
+}
+.content{
+	background:rgb(240,240,250);
+	margin-top:0;
+	padding:10px;
+}
+.content ul{
+	list-style-type:none;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html ng-app="myApp" lang="en">
+<head>
+	<title>Maquina</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<script src="angular.js"></script>
+	<script src="app.js"></script>
+</head>
+<body ng-controller="appController as app">
+	<div class="wrapper">
+    	<div class="navbar">
+        	<h1><a href=# ng-click="app.tab = 1">Maquina</a></h1>
+        	<ul class="menu">
+        		<li><a href=# ng-click="app.tab = 1"><span ng-hide="app.tab === 1">Fountain Control</span><span ng-show="app.tab === 1"><strong>Fountain Control</strong></span></a></li>
+                <li><a href=# ng-click="app.tab = 2"><span ng-hide="app.tab === 2">Pattern Creator</span><span ng-show="app.tab === 2"><strong>Pattern Creator</strong></span></a></li>
+                <li><a href=# ng-click="app.tab = 3"><span ng-hide="app.tab === 3">About</span><span ng-show="app.tab === 3"><strong>About</strong></span></a></li>
+                <li><a href=# ng-click="app.tab = 4"><span ng-hide="app.tab === 4">Forum</span><span ng-show="app.tab === 4"><strong>Forum</strong></span></a></li>
+                <li><a href=# ng-click="app.tab = 5"><span ng-hide="app.tab === 5">Admin</span><span ng-show="app.tab === 5"><strong>Admin</strong></span></a></li>
+        	</ul>
+            <div class="controlStatus">
+            	in control for the next {{app.tab}} second(s)
+            </div>
+        </div>
+    	<div class="content control" ng-show="app.tab === 1">
+        	<h2>Valve State:</h2>
+            <ul>
+            	<li><button class="idle sample">Idle</button>: Idle means that the valveis not currently streaming water, but is available to be turned on if desired.</li>
+                <li><button class="active sample">Active</button>: Active means that the valve is currently streaming water.</li>
+                <li><button class="disabled sample">Disabled</button>: Disabled means that the valve is not currently available, due to technical or maintenance issues.</li>
+            </ul>
+            <div>
+            	Vertical Valves:&nbsp;&nbsp;&nbsp;&nbsp;
+               	<button ng-repeat='jet in app.jets | limitTo:12' id="{{jet.name}}" class="idle" ng-click="toggle(jet.name, jet.spraying, jet.ID - 1, jet.enabled)">{{jet.name}}</button>
+            </div>
+            <div>
+            	Horizontal Valves:
+                <button ng-repeat='jet in app.jets | limitTo:-12' id="{{jet.name}}" class="idle" ng-click="toggle(jet.name, jet.spraying, jet.ID - 1, jet.enabled)">{{jet.name}}</button>
+            </div>
+            <div>{{app.config}}</div><!-- this doesn't show for some reason :/ -->
+        </div>
+        <div class="content pattern" ng-show="app.tab === 2">
+        	<h2>Coming Soon</h2>
+        </div>
+        <div class="content about" ng-show="app.tab === 3">
+        	<h2>About the Maquina Fountain</h2>
+			<p>The Statue of Liberty, Bucky Badger and the Maquina Fountain all have one thing in common. They are all icons. They continually remind you of what they stand for. Take Bucky, for instance. Ask any alumni, student, or child growing up in Wisconsin and he or she will know what Bucky represents.</p>
+			<p>Maquina is a repetitive symbol represented throughout the UW-Madison College of Engineering. Visit any of the computer labs throughout the Engineering campus and not only will the background have a picture of Maquina, it will also likely be featured on the mouse pad. Maquina is a symbol of the College of Engineering linking alumni, current and future students.</p>
+			<p>The redesign of the Engineering campus began as the dream of one man, Former Dean John G. Bollinger. "There were several major goals, including providing an aesthetic campus connected to the rest of the university through the (Henry) mall, providing Engineering Hall with an appropriate front door, placing a cornerstone building at the end of Engineering Drive (the Engineering Centers Building) and adding a major parking facility," Bollinger says.</p>
+            <p>The Maquina Fountain idea came about during the course of the redesign when Bollinger met William Conrad Severson. Severson wanted to create an artistic work to recognize his family in Madison. His father began the Madison television station WKOW. Bollinger also happened to room in his house during his student years. "We started to share a vision of the engineering mall, the fountain and the ponds. We worked together for two years developing the concepts, while I raised the money for the construction. Many people contributed, but the largest donor was David Grainger," Bollinger says.</p>
+			<p>Other than for its pleasing aesthetics, the fountain was also built to provide UW-Madison students with an opportunity for hands-on learning. Giddings and Lewis donated a programmable logic controller that coordinates the spraying mechanisms in the fountain. Students are responsible for programming this mechanism.</p>
+			<p>That's just one task for Enlight, the student group that oversees the fountain's operation. They are also working to create a web interface so anyone can help control the fountain. Through this site, remote users will be able to manipulate the fountain and watch it live over the Internet. The Maquina fountain is on camera at http://fountaincam.engr.wisc.edu.</p>
+			<p>Enlight is working towards implementing Bollinger's original goals for the fountain. "I hope the students develop a way to propagate the vision of a facility that attracts engineers, artists, musicians, performers and others to work together to use technology to advance aesthetic appreciation," Bollinger says.</p>
+			<p>The redesign has greatly enhanced the look of the Engineering campus. It provides an enjoyable pedestrian mall year round. With large grass areas and benches surrounding the fountain, students can study, relax and enjoy events hosted there, such as the "Battle of the Bands."</p>
+			<p>Bollinger's main goals for the fountain are "to provide a special student experience as well as serve as an icon for the College of Engineering. The latter is demonstrated every year now by the fact that almost all graduates get their picture taken with family and friends in front of the fountain."</p>
+            <p style="text-align:right;"><a style="color:grey;" href="http://www.luminsphere.com/wisc_engr/february04/fountain.shtml">http://www.luminsphere.com/wisc_engr/february04/fountain.shtml</a></p>
+        </div>
+        <div class="content forum" ng-show="app.tab === 4">
+        	<h2>Coming Soon</h2>
+        </div>
+        <div class="content admin" ng-show="app.tab === 5">
+        	<h2>Work In Progress</h2>
+        </div>
+    </div>
+</body>
+</html>
